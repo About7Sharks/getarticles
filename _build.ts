@@ -25,7 +25,7 @@ await build({
   },
   package:{
     name:"@about7sharks/get-articles",
-    version:"0.0.1",
+    version:"0.0.11",
     description:"A small library to get articles from Github",
     license:"MIT",
     devDependencies: {
