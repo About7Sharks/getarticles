@@ -1,4 +1,4 @@
-import {build, emptyDir} from 'https://deno.land/x/dnt/mod.ts';
+import {build, emptyDir} from 'https://deno.land/x/dnt@0.23.0/mod.ts';
 await emptyDir('./npm');
 
 await build({
@@ -6,31 +6,45 @@ await build({
   entryPoints: ['./mod.ts'],
   outDir: './npm',
   shims:{
-    deno:"dev",
+    deno: "dev",
     custom: [{
       package: {
-        name: "node-fetch",
-        version: "~3.1.0",
+        name: 'node-fetch',
+        version: '^3.2.4',
+      },
+      typesPackage: {
+        name: '@types/node-fetch',
+        version: '2.6.1',
       },
       globalNames: [{
-        // for the `fetch` global...
-        name: "fetch",
-        // use the default export of node-fetch
-        exportName: "default",
+        name: 'fetch',
+        exportName: 'default',
       }, {
-        name: "RequestInit",
-        typeOnly: true, // only used in type declarations
+        name: 'Request',
+        typeOnly: true,
+      }, {
+        name: 'Response',
       }],
-    }, ]
+    }],
+  },
+  compilerOptions: {
+    target: 'ES2021',
   },
   package:{
     name:"@about7sharks/get-articles",
-    version:"0.0.11",
+    version:"0.0.3",
     description:"A small library to get articles from Github",
     license:"MIT",
-    devDependencies: {
-      "@types/node": "16.11.26"
+    engines: {
+      node: '>=16.6.0',
     },
+    devDependencies: {
+      '@types/node': '16.x.x',
+    },
+    files: [
+      'esm/*',
+      'types/*',
+    ],
   },
 
 })

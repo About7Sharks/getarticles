@@ -1,11 +1,12 @@
+export type Info = { user: string, repo: string, article?: string }
 
-type Info = { user: string, repo: string, article?: string }
-
-export const repoUrl = ({
+export const _repoData = async ({
   user,
   repo,
-}: Info): string => {
-  return `https://api.github.com/repos/${user}/${repo}/git/trees/main?recursive=1`;
+}: Info) => {
+  let data = await fetch(`https://api.github.com/repos/${user}/${repo}/git/trees/main?recursive=1`) as any
+  data = await data.json();
+  return data;
 };
 // helper function to get an article url
 export const getArticle = async ({
@@ -13,19 +14,20 @@ export const getArticle = async ({
   repo,
   article = "README",
 }: Info) => {
-  // if includes .md, remove it
+  // if includes .md in filename, remove it
   if (article.includes(".md")) article = article.replace(".md", "");
   let data: any = await fetch(
     `https://raw.githubusercontent.com/${user}/${repo}/main/${article}.md`,
   );
-  data = await data.text();
-  return data;
+  return {
+    data,
+    content: await data.text()
+  };;
 };
+
 export const getArticles = async ({ user, repo }: Info) => {
-  let data = await fetch(repoUrl({ user, repo }));
-  let json:any = await data.json();
-  let files = json.tree;
-  let articles = files.filter((file: any) => file.path.includes(".md"));
+  let { tree } = await _repoData({ user, repo }) as any;
+  let articles = tree.filter((file: any) => file.path.includes(".md"));
   let articlePromises = articles.map((article: any) =>
     getArticle({ article: article.path, user, repo }),
   );
