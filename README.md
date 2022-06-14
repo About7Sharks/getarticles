@@ -1,5 +1,5 @@
 # Github Blog API
-
+[API DOCS](https://deno.land/x/getarticles@deno.land)
 I highly recommend using deno to write libraries that can be used in the overall javascript ecosystem. By utilizing deno's built in tools and TypeScript, you can
 easily write libraries that can be used in the browser, node, and Deno.
 
