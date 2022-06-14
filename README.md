@@ -26,7 +26,7 @@ import { getArticles } from "https://esm.sh/@about7sharks/get-articles";
 ### Node
 If using in node you first need to install the package.
 ```bash
-npm i -g @about7sharks/get-articles
+npm i @about7sharks/get-articles
 ```
 ```js
 import { getArticles } from "@about7sharks/get-articles";
