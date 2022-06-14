@@ -1,0 +1,223 @@
+[
+  {
+    "kind": "typeAlias",
+    "name": "Info",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 1,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "typeLiteral",
+        "typeLiteral": {
+          "methods": [],
+          "properties": [
+            {
+              "name": "user",
+              "params": [],
+              "computed": false,
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              },
+              "typeParams": []
+            },
+            {
+              "name": "repo",
+              "params": [],
+              "computed": false,
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              },
+              "typeParams": []
+            },
+            {
+              "name": "article",
+              "params": [],
+              "computed": false,
+              "optional": true,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              },
+              "typeParams": []
+            }
+          ],
+          "callSignatures": [],
+          "indexSignatures": []
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "_repoData",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 3,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "variableDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "fnOrConstructor",
+        "fnOrConstructor": {
+          "constructor": false,
+          "tsType": {
+            "repr": "unknown",
+            "kind": "keyword",
+            "keyword": "unknown"
+          },
+          "params": [
+            {
+              "kind": "object",
+              "props": [
+                {
+                  "kind": "assign",
+                  "key": "user",
+                  "value": null
+                },
+                {
+                  "kind": "assign",
+                  "key": "repo",
+                  "value": null
+                }
+              ],
+              "optional": false,
+              "tsType": {
+                "repr": "Info",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "Info"
+                }
+              }
+            }
+          ],
+          "typeParams": []
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "getArticle",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 12,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "variableDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "fnOrConstructor",
+        "fnOrConstructor": {
+          "constructor": false,
+          "tsType": {
+            "repr": "unknown",
+            "kind": "keyword",
+            "keyword": "unknown"
+          },
+          "params": [
+            {
+              "kind": "object",
+              "props": [
+                {
+                  "kind": "assign",
+                  "key": "user",
+                  "value": null
+                },
+                {
+                  "kind": "assign",
+                  "key": "repo",
+                  "value": null
+                },
+                {
+                  "kind": "assign",
+                  "key": "article",
+                  "value": "[UNSUPPORTED]"
+                }
+              ],
+              "optional": false,
+              "tsType": {
+                "repr": "Info",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "Info"
+                }
+              }
+            }
+          ],
+          "typeParams": []
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "getArticles",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 28,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "variableDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "fnOrConstructor",
+        "fnOrConstructor": {
+          "constructor": false,
+          "tsType": {
+            "repr": "unknown",
+            "kind": "keyword",
+            "keyword": "unknown"
+          },
+          "params": [
+            {
+              "kind": "object",
+              "props": [
+                {
+                  "kind": "assign",
+                  "key": "user",
+                  "value": null
+                },
+                {
+                  "kind": "assign",
+                  "key": "repo",
+                  "value": null
+                }
+              ],
+              "optional": false,
+              "tsType": {
+                "repr": "Info",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "Info"
+                }
+              }
+            }
+          ],
+          "typeParams": []
+        }
+      },
+      "kind": "const"
+    }
+  }
+]
