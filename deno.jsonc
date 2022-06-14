@@ -1,5 +1,8 @@
 {
   "tasks": {
     "gen-docs":"deno doc mod.ts --json >> denoDoc.json",
+    "lint": "deno lint --unstable mod.ts",
+    "build":"deno run -A _build.ts",
+    "publish": "cd npm && npm publish --access public"
   }
 }

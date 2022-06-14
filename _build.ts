@@ -27,24 +27,11 @@ await build({
       }],
     }],
   },
-  compilerOptions: {
-    target: 'ES2021',
-  },
   package:{
     name:"@about7sharks/get-articles",
-    version:"0.0.3",
+    version:"0.0.31",
     description:"A small library to get articles from Github",
     license:"MIT",
-    engines: {
-      node: '>=16.6.0',
-    },
-    devDependencies: {
-      '@types/node': '16.x.x',
-    },
-    files: [
-      'esm/*',
-      'types/*',
-    ],
   },
 
 })

@@ -2,22 +2,9 @@
   "module": "./esm/mod.js",
   "types": "./types/mod.d.ts",
   "name": "@about7sharks/get-articles",
-  "version": "0.0.3",
+  "version": "0.0.31",
   "description": "A small library to get articles from Github",
   "license": "MIT",
-  "engines": {
-    "node": ">=16.6.0"
-  },
-  "devDependencies": {
-    "@types/node": "16.x.x",
-    "chalk": "4.1.2",
-    "@deno/shim-deno": "~0.5.0",
-    "@types/node-fetch": "2.6.1"
-  },
-  "files": [
-    "esm/*",
-    "types/*"
-  ],
   "exports": {
     ".": {
       "import": "./esm/mod.js",
@@ -29,5 +16,11 @@
   },
   "dependencies": {
     "node-fetch": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.26",
+    "chalk": "4.1.2",
+    "@deno/shim-deno": "~0.5.0",
+    "@types/node-fetch": "2.6.1"
   }
 }
