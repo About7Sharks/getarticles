@@ -49,8 +49,6 @@ export const getArticles = async ({ user, repo }: Info) => {
   }
 };
 
-
-
 // Converts a fetched article to html and the corresponding metadata
 export const Markdown = (data:AllArticles) => {
   return data.map(({content}) => {
