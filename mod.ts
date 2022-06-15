@@ -1,3 +1,6 @@
+import matter from 'https://esm.sh/gray-matter';
+import {marked} from 'https://esm.sh/marked';
+
 export type Tree = { tree: Array<{ path: string }> }
 interface Article {
   resp: Response;
@@ -45,3 +48,31 @@ export const getArticles = async ({ user, repo }: Info) => {
     return [];
   }
 };
+
+
+
+// Converts a fetched article to html and the corresponding metadata
+export const Markdown = (data:AllArticles) => {
+  return data.map(({content}) => {
+    const {data} = matter(content);
+    const html= marked.parse(content);
+    return { data, html };
+  });
+}
+
+
+// Example
+// const data = await getArticles({ user: "About7Sharks", repo: "Markdown" });
+// console.log(Markdown(data as AllArticles)[4])
+
+
+// export type MetaData= {
+//   title: string,
+//   date: string,
+//   author: string,
+//   location: string,
+//   image: string,
+//   summary: string,
+//   tags:string[]
+//   content: string
+// }
