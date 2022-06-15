@@ -1,3 +1,9 @@
+export type Tree = { tree: Array<{ path: string }> }
+interface Article {
+  resp: Response;
+  content: string;
+}
+export type AllArticles = Article[]
 export type Info = { user: string, repo: string, article?: string }
 
 export const _repoData = async ({
@@ -24,13 +30,18 @@ export const getArticle = async ({
     content: await resp.text()
   };
 };
-export type Tree ={ tree: Array<{ path: string }> }
+
 export const getArticles = async ({ user, repo }: Info) => {
-  const { tree } = await _repoData({ user, repo }) as Tree;
-  const articles = tree.filter((file) => file.path.includes(".md"));
-  const articlePromises = articles.map((article) =>
-    getArticle({ article: article.path, user, repo }),
-  );
-  const allArticles = await Promise.all(articlePromises);
-  return allArticles;
+  try {
+    const { tree } = await _repoData({ user, repo }) as Tree;
+    const articles = tree.filter((file) => file.path.includes(".md"));
+    const articlePromises = articles.map((article) =>
+      getArticle({ article: article.path, user, repo }),
+    );
+    const allArticles = await Promise.all(articlePromises) as AllArticles;
+    return allArticles;
+  } catch {
+    console.error("Error getting articles, returning empty array. Ensure you have the correct user and repo name.");
+    return [];
+  }
 };
