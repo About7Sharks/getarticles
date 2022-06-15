@@ -1,5 +1,5 @@
 # Github Blog API
-
+[API DOCS](https://deno.land/x/getarticles@deno.land)
 I highly recommend using deno to write libraries that can be used in the overall javascript ecosystem. By utilizing deno's built in tools and TypeScript, you can
 easily write libraries that can be used in the browser, node, and Deno.
 
@@ -26,7 +26,7 @@ import { getArticles } from "https://esm.sh/@about7sharks/get-articles";
 ### Node
 If using in node you first need to install the package.
 ```bash
-npm i -g @about7sharks/get-articles
+npm i @about7sharks/get-articles
 ```
 ```js
 import { getArticles } from "@about7sharks/get-articles";

@@ -17,7 +17,7 @@
 // This module is browser compatible.
 
 // deno-lint-ignore no-explicit-any
-import * as dntShim from "../../../../_dnt.test_shims.js";
+import * as dntShim from "../../../../_dnt.shims.js";
 
 const { Deno } = dntShim.dntGlobalThis as any;
 const noColor = typeof Deno?.noColor === "boolean"

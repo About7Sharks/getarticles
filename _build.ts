@@ -5,6 +5,10 @@ await build({
   scriptModule: false,
   entryPoints: ['./mod.ts'],
   outDir: './npm',
+  compilerOptions: {
+    importHelpers: true,
+    target: "ES2021",
+  },
   shims:{
     deno: "dev",
     custom: [{
@@ -29,10 +33,16 @@ await build({
   },
   package:{
     name:"@about7sharks/get-articles",
-    version:"0.0.31",
+    version:"0.0.33",
     description:"A small library to get articles from Github",
     license:"MIT",
-  },
+    dependencies: {
+      "gray-matter": "^4.0.3",
+      "marked": "^4",
+    },
+    devDependencies: {
+      "@types/marked":"^4"
+  }}
 
 })
 Deno.copyFileSync('README.md', './npm/README.md');

@@ -1,5 +1,4 @@
-import matter from 'https://esm.sh/gray-matter';
-import {marked} from 'https://esm.sh/marked';
+import {matter, marked} from "./deps.ts"
 
 export type Tree = { tree: Array<{ path: string }> }
 interface Article {
@@ -44,7 +43,7 @@ export const getArticles = async ({ user, repo }: Info) => {
     const allArticles = await Promise.all(articlePromises) as AllArticles;
     return allArticles;
   } catch {
-    console.error("Error getting articles, returning empty array. Ensure you have the correct user and repo name.");
+    // console.error("Error getting articles, returning empty array. Ensure you have the correct user and repo name.");
     return [];
   }
 };
@@ -57,20 +56,3 @@ export const Markdown = (data:AllArticles) => {
     return { data, html };
   });
 }
-
-
-// Example
-// const data = await getArticles({ user: "About7Sharks", repo: "Markdown" });
-// console.log(Markdown(data as AllArticles)[4])
-
-
-// export type MetaData= {
-//   title: string,
-//   date: string,
-//   author: string,
-//   location: string,
-//   image: string,
-//   summary: string,
-//   tags:string[]
-//   content: string
-// }

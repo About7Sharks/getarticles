@@ -6,7 +6,7 @@
  * make tests less flaky
  * @param v Value to be formatted
  */
-import * as dntShim from "../../../../_dnt.test_shims.js";
+import * as dntShim from "../../../../_dnt.shims.js";
 
 export function format(v: unknown): string {
   // deno-lint-ignore no-explicit-any
