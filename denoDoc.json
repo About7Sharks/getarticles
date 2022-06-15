@@ -221,3 +221,383 @@
     }
   }
 ]
+[
+  {
+    "kind": "typeAlias",
+    "name": "Tree",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 4,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "typeLiteral",
+        "typeLiteral": {
+          "methods": [],
+          "properties": [
+            {
+              "name": "tree",
+              "params": [],
+              "computed": false,
+              "optional": false,
+              "tsType": {
+                "repr": "Array",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": [
+                    {
+                      "repr": "",
+                      "kind": "typeLiteral",
+                      "typeLiteral": {
+                        "methods": [],
+                        "properties": [
+                          {
+                            "name": "path",
+                            "params": [],
+                            "computed": false,
+                            "optional": false,
+                            "tsType": {
+                              "repr": "string",
+                              "kind": "keyword",
+                              "keyword": "string"
+                            },
+                            "typeParams": []
+                          }
+                        ],
+                        "callSignatures": [],
+                        "indexSignatures": []
+                      }
+                    }
+                  ],
+                  "typeName": "Array"
+                }
+              },
+              "typeParams": []
+            }
+          ],
+          "callSignatures": [],
+          "indexSignatures": []
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "AllArticles",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 9,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "array",
+        "array": {
+          "repr": "Article",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "Article"
+          }
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "Info",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 10,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "typeLiteral",
+        "typeLiteral": {
+          "methods": [],
+          "properties": [
+            {
+              "name": "user",
+              "params": [],
+              "computed": false,
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              },
+              "typeParams": []
+            },
+            {
+              "name": "repo",
+              "params": [],
+              "computed": false,
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              },
+              "typeParams": []
+            },
+            {
+              "name": "article",
+              "params": [],
+              "computed": false,
+              "optional": true,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              },
+              "typeParams": []
+            }
+          ],
+          "callSignatures": [],
+          "indexSignatures": []
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "_repoData",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 12,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "variableDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "fnOrConstructor",
+        "fnOrConstructor": {
+          "constructor": false,
+          "tsType": {
+            "repr": "unknown",
+            "kind": "keyword",
+            "keyword": "unknown"
+          },
+          "params": [
+            {
+              "kind": "object",
+              "props": [
+                {
+                  "kind": "assign",
+                  "key": "user",
+                  "value": null
+                },
+                {
+                  "kind": "assign",
+                  "key": "repo",
+                  "value": null
+                }
+              ],
+              "optional": false,
+              "tsType": {
+                "repr": "Info",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "Info"
+                }
+              }
+            }
+          ],
+          "typeParams": []
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "getArticle",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 21,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "variableDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "fnOrConstructor",
+        "fnOrConstructor": {
+          "constructor": false,
+          "tsType": {
+            "repr": "unknown",
+            "kind": "keyword",
+            "keyword": "unknown"
+          },
+          "params": [
+            {
+              "kind": "object",
+              "props": [
+                {
+                  "kind": "assign",
+                  "key": "user",
+                  "value": null
+                },
+                {
+                  "kind": "assign",
+                  "key": "repo",
+                  "value": null
+                },
+                {
+                  "kind": "assign",
+                  "key": "article",
+                  "value": "[UNSUPPORTED]"
+                }
+              ],
+              "optional": false,
+              "tsType": {
+                "repr": "Info",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "Info"
+                }
+              }
+            }
+          ],
+          "typeParams": []
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "getArticles",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 37,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "variableDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "fnOrConstructor",
+        "fnOrConstructor": {
+          "constructor": false,
+          "tsType": {
+            "repr": "unknown",
+            "kind": "keyword",
+            "keyword": "unknown"
+          },
+          "params": [
+            {
+              "kind": "object",
+              "props": [
+                {
+                  "kind": "assign",
+                  "key": "user",
+                  "value": null
+                },
+                {
+                  "kind": "assign",
+                  "key": "repo",
+                  "value": null
+                }
+              ],
+              "optional": false,
+              "tsType": {
+                "repr": "Info",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "Info"
+                }
+              }
+            }
+          ],
+          "typeParams": []
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "Markdown",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 55,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "variableDef": {
+      "tsType": {
+        "repr": "",
+        "kind": "fnOrConstructor",
+        "fnOrConstructor": {
+          "constructor": false,
+          "tsType": {
+            "repr": "unknown",
+            "kind": "keyword",
+            "keyword": "unknown"
+          },
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "data",
+              "optional": false,
+              "tsType": {
+                "repr": "AllArticles",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "AllArticles"
+                }
+              }
+            }
+          ],
+          "typeParams": []
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "import",
+    "name": "matter",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 1,
+      "col": 0
+    },
+    "declarationKind": "private",
+    "importDef": {
+      "src": "https://esm.sh/v83/gray-matter@4.0.3/gray-matter.d.ts",
+      "imported": "default"
+    }
+  },
+  {
+    "kind": "import",
+    "name": "marked",
+    "location": {
+      "filename": "file:///home/zac/Desktop/code/getArticles/mod.ts",
+      "line": 2,
+      "col": 0
+    },
+    "declarationKind": "private",
+    "importDef": {
+      "src": "https://esm.sh/v86/@types/marked@~4.0/index.d.ts",
+      "imported": "marked"
+    }
+  }
+]
